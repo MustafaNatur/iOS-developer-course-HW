@@ -58,7 +58,6 @@
 			children = (
 				9741063D2997A97300B28F21 /* Model */,
 				9741063C2997A95300B28F21 /* Custom elements */,
-				9741063B2997A93F00B28F21 /* Extensions */,
 				974106382997A8C700B28F21 /* ViewControllers */,
 				974106392997A8F200B28F21 /* Support */,
 				9741063A2997A92A00B28F21 /* Assets */,
@@ -91,13 +90,6 @@
 				9741062F2997644100B28F21 /* LaunchScreen.storyboard */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		9741063B2997A93F00B28F21 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9741063C2997A95300B28F21 /* Custom elements */ = {

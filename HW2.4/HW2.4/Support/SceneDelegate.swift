@@ -14,11 +14,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
         let window = UIWindow(windowScene: windowScene)
-        let MainViewController = ViewController()
-        window.rootViewController = UINavigationController(rootViewController: MainViewController)
+        let NavigationController = UINavigationController(rootViewController: ViewController())
+        window.rootViewController = NavigationController
+        NavigationController.navigationBar.prefersLargeTitles = true
         window.makeKeyAndVisible()
         self.window = window
+        
+        
+//        let navController = UINavigationController(rootViewController: NewsListVC())
+//        navController.navigationBar.prefersLargeTitles = true
+//        
+//        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+//        window?.windowScene = windowScene
+//        window?.rootViewController = navController
+//        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
