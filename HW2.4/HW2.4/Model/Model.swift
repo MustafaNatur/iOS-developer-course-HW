@@ -16,6 +16,6 @@ struct Song {
 
 struct Model {
     static func getSongs() -> [Song] {
-        return [Song](repeating: Song(name: "Lean4Real", autor: "Playboi carti (feat. Skepta)", image: UIImage(named: "Die Lit")), count: 10)
+        return [Song](repeating: Song(name: "Lean4Real", autor: "Playboi carti (feat. Skepta)", image: UIImage(named: "Lean4Real")), count: 10)
     }
 }

@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     var tableView:UITableView = {
         let table = UITableView()
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.register(CustomCell.self, forCellReuseIdentifier: "CustomCell")
         table.rowHeight = 100
         return table
     }()
@@ -48,16 +48,14 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        cell.textLabel?.text = songs[indexPath.row].name
-        cell.imageView?.image = UIImage(named: "Lean4Real")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomCell
+        
+        cell.setData(model: CellModel(name: songs[indexPath.row].name, author: songs[indexPath.row].autor, image: songs[indexPath.row].image!))
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songs.count
     }
-    
-
 }
 
