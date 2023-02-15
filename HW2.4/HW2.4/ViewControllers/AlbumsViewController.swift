@@ -7,9 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AlbumsViewController: UIViewController {
     
-    let songs = Model.getSongs()
+    var albums = Model.getAlbums()
     
     var tableView:UITableView = {
         let table = UITableView()
@@ -17,11 +17,6 @@ class ViewController: UIViewController {
         table.rowHeight = 100
         return table
     }()
-    // createTableView
-    // setConstrains
-    // create Cell
-    // setConstains
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     func configureViewController() {
-        title = "Music"
+        title = "Albums"
         view.addSubview(tableView)
         view.backgroundColor = .systemBackground
     }
@@ -46,16 +41,19 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension AlbumsViewController: UITableViewDelegate, UITableViewDataSource {
+
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! CustomCell
         
-        cell.setData(model: CellModel(name: songs[indexPath.row].name, author: songs[indexPath.row].autor, image: songs[indexPath.row].image!))
+        cell.setData(model: CellModel(name: albums[indexPath.row].name, author: albums[indexPath.row].autor, image: albums[indexPath.row].image!))
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return songs.count
+        return albums.count
     }
+
 }
 
