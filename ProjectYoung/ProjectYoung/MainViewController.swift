@@ -15,8 +15,9 @@ class MainViewController: UITabBarController {
     }
     
     func configureUITabBar() {
+        let vc = UINavigationController(rootViewController: NewsViewController())
         viewControllers = [
-            generateViewController(name: "News", image: UIImage(systemName: "newspaper.fill"), controller: NewsViewController()),
+            generateViewController(name: "News", image: UIImage(systemName: "newspaper.fill"), controller: vc),
             generateViewController(name: "Market", image: UIImage(systemName: "bag.fill"), controller: MarketViewController()),
             generateViewController(name:"Me", image: UIImage(systemName: "person.fill"), controller: LoginViewController())
         ]

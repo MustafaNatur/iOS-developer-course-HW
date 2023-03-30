@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9711053129CD9285007B30D9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9711053029CD9285007B30D9 /* CustomTableViewCell.swift */; };
 		978B8BE029CB3B6100C5B3F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978B8BDF29CB3B6100C5B3F8 /* AppDelegate.swift */; };
 		978B8BE229CB3B6100C5B3F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978B8BE129CB3B6100C5B3F8 /* SceneDelegate.swift */; };
 		978B8BF629CB3D8400C5B3F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 978B8BF529CB3D8400C5B3F8 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9711053029CD9285007B30D9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		978B8BDC29CB3B6100C5B3F8 /* ProjectYoung.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectYoung.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		978B8BDF29CB3B6100C5B3F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		978B8BE129CB3B6100C5B3F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				978B8BE129CB3B6100C5B3F8 /* SceneDelegate.swift */,
 				97FC01E329CD0CFB00F6B01D /* MarketViewController.swift */,
 				97FC01E129CD0CEC00F6B01D /* NewsViewController.swift */,
+				9711053029CD9285007B30D9 /* CustomTableViewCell.swift */,
 				97FC01DD29CCEC0F00F6B01D /* LoginViewController.swift */,
 				97FC01DF29CCEDB300F6B01D /* MainViewController.swift */,
 				978B8BED29CB3B6300C5B3F8 /* Info.plist */,
@@ -142,6 +145,7 @@
 				978B8BE029CB3B6100C5B3F8 /* AppDelegate.swift in Sources */,
 				97FC01DE29CCEC0F00F6B01D /* LoginViewController.swift in Sources */,
 				978B8BE229CB3B6100C5B3F8 /* SceneDelegate.swift in Sources */,
+				9711053129CD9285007B30D9 /* CustomTableViewCell.swift in Sources */,
 				97FC01E229CD0CEC00F6B01D /* NewsViewController.swift in Sources */,
 				97FC01E429CD0CFB00F6B01D /* MarketViewController.swift in Sources */,
 				97FC01E029CCEDB300F6B01D /* MainViewController.swift in Sources */,

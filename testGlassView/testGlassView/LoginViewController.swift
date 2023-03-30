@@ -53,9 +53,12 @@ class LoginViewController: UIViewController {
     let glassView = {
         let view = UIView()
         view.frame = CGRect(x: 0, y: 0, width: 300, height: 280)
-        view.layer.cornerRadius = 25
+        view.layer.cornerRadius = 30
         view.backgroundColor = UIColor.white.withAlphaComponent(0.1)
         view.clipsToBounds = true
+        view.layer.borderWidth = 3
+        view.layer.borderColor = CGColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 0.65)
+        //rgba(238, 238, 238, 0.65)
         return view
     }()
     
@@ -151,7 +154,7 @@ class LoginViewController: UIViewController {
     }
     
     func setViewSettings(){
-        let background = UIImage(named: "img3")
+        let background = UIImage(named: "backgroundImage")
 
         imageView.frame = view.bounds
         imageView.contentMode = .scaleAspectFill
@@ -166,7 +169,7 @@ class LoginViewController: UIViewController {
 
 extension UIView {
     func applyBlurEffect() {
-        let blurEffect = UIBlurEffect(style: .systemUltraThinMaterial)
+        let blurEffect = UIBlurEffect(style: .systemUltraThinMaterialLight)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         
         blurEffectView.frame = bounds
