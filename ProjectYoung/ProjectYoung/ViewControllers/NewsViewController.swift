@@ -12,7 +12,6 @@ class NewsViewController: UIViewController {
     let imageView = UIImageView()
     let tableView = UITableView(frame: .zero, style: .plain)
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationController()
@@ -20,17 +19,15 @@ class NewsViewController: UIViewController {
         configureTableView()
         setTableViewDelegates()
         tableView.reloadData()
-        imageView.bringSubviewToFront(tableView)
     }
     
     func configureNavigationController() {
         title = "News"
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.purple]
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 50)!, NSAttributedString.Key.foregroundColor: UIColor.white]
     }
 
-    
     func configureImageView() {
         view.addSubview(imageView)
         imageView.frame = view.bounds
@@ -57,17 +54,6 @@ class NewsViewController: UIViewController {
          tableView.delegate = self
          tableView.dataSource = self
      }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -76,10 +62,9 @@ extension NewsViewController:UITableViewDelegate, UITableViewDataSource {
         10
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as! CustomTableViewCell
-        cell.set(text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore", image: UIImage(named: "exmpl"))
+        cell.set(text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore", image1: UIImage(named: "profileImage1"), image2: UIImage(named: "profileImage2"), image3: UIImage(named: "profileImage3"))
         return cell
     }
     
@@ -91,6 +76,5 @@ extension NewsViewController:UITableViewDelegate, UITableViewDataSource {
         let vc = MarketViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
-    
     
 }
